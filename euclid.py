@@ -1,15 +1,10 @@
-a,b = (int(x) for x in input("値をカンマで区切って入力:").split(","))
+a = int(input("a の値を入力: "))
+b = int(input("b の値を入力: "))
 
-if a > b:
-    big = a
-    sma = b
-else:
-    big = b
-    sma = a
+if  a < b:
+  a,b = b,a
 
 while big % sma != 0:
-    big_kari = sma
-    sma = big % sma
-    big = big_kari
+   sma,big=big%sma,sma
 
 print(sma)

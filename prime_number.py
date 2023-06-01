@@ -5,7 +5,7 @@ limit = a ** (1/2)
 count = 2
 count2 = 0
 
-while count < limit:
+while count <= limit:
     if a % count == 0:
         print(str(a) + "は素数でない")
         count2 = 1

@@ -1,14 +1,16 @@
 from math import sin
-import math
+from math import pi 
 
 a = 0
-b = math.pi/2
+b = pi/2
 n = 100
+f = sin
 
 h = (b-a)/n
+s = 0
 
-for i in (1 , n):
-    s = sin(a + (i-1)*h) + sin(a + i*h)
+for i in range(1 , n+1):
+    s = s + f(a + (i-1)*h) + f(a + i*h)
 
 s = s * h /2
 
